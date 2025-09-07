@@ -1,10 +1,11 @@
-const body = document.body
+
 
 function initSideMenu()
 {
     const menuBtn = document.querySelector(".mobile-icon")
     const sideMenu = document.querySelector(".side-menu-nav")
     const overlay = document.querySelector(".overlay")
+    const body = document.body
 
     menuBtn.addEventListener("click", () => {
         menuBtn.classList.toggle("active")
@@ -14,8 +15,9 @@ function initSideMenu()
     })
 }
 
-initHideOnScroll()
+function initHideOnScroll()
 {
+    const body = document.body
     let lastScroll = 0
 
     window.addEventListener("scroll", () => {

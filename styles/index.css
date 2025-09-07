@@ -65,13 +65,13 @@ body.active{
     transition: all .3s ease;
 }
 .mobile-icon.active span:nth-child(1){
-    transform: rotate(45deg) translateY(13px);
+    transform: rotate(45deg) translateY(14px);
 }
 .mobile-icon.active span:nth-child(2){
     opacity: 0;
 }
 .mobile-icon.active span:nth-child(3){
-    transform: rotate(-45deg) translateY(-13px);
+    transform: rotate(-45deg) translateY(-14px);
 }
 
 .menu-nav{
