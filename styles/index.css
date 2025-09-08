@@ -93,6 +93,16 @@ body.active{
 }
 
 
+.hero{
+    height: 120dvh;
+
+    background-image: url(../assets/band/band-img2.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
 .member-desc{
     display: none;
 }
