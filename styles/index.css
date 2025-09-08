@@ -96,13 +96,82 @@ body.active{
 .hero{
     height: 120dvh;
 
-    background-image: url(../assets/band/band-img2.jpg);
+    background-image: url(../assets/band/band-img6.jpg);
     background-repeat: none;
     background-size: cover;
     background-attachment: fixed;
 }
 
+.band-members{
+    padding-block: 3rem;
+    margin: auto;
 
-.member-desc{
+    background-color: #0000ff31;
+}
+.members-box{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .5rem;
+    padding-block: 3rem;
+
+    border: 1px solid;
+}
+.member-card{
+    width: 80%;
+    height: 500px;
+    margin: auto;
+
+    overflow: hidden;
+    border: 1px solid;
+}
+.member-card img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+.member-card img:hover{
+    transform: scale(1.1);
+}
+
+.member-desc div{
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    overflow-y: auto;
+
+    background-color: #fff;
+}
+.member-desc div.active{
+    display: block;
+}
+.member-desc button{
+    width: 50px;
+    height: 50px;
+
+    font-size: 2rem;
+
+    border: none;
+    background-color: transparent;
+}
+.member-desc img{
+    width: 100%;
+    display: block;
+    margin-bottom: 1rem;
+}
+.member-desc h3{
+    text-align: center;
+    font-size: 2rem;
+}
+.member-desc p{
+    width: 80%;
+    padding-block: 2rem;
+    text-align: justify;
+    margin: auto;
 }

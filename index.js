@@ -1,4 +1,4 @@
-
+const { func } = require("prop-types")
 
 function initSideMenu()
 {
@@ -41,7 +41,19 @@ function initHideOnScroll()
     })
 }
 
+function initMemberDesc()
+{
+    const memberCards = document.querySelectorAll(".member-card")
+    const memberDesc = document.querySelectorAll(".member-desc div")
+    const exitBtn = document.querySelectorAll(".desc-exit")
+
+    memberCards.forEach(card => card.addEventListener("click", () => {
+        memberDesc.forEach(desc => desc.classList.add("active"))
+    }))
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     initSideMenu()
     initHideOnScroll()
+    initMemberDesc()
 })
