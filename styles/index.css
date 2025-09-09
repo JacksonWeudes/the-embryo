@@ -39,8 +39,7 @@ body.active{
     padding-inline: 1.4rem;
     z-index: 999;
 
-    background-color: #ff0000;
-
+    background-color: #fff;
     transition: all .3s ease-in-out;
 }
 .logo{
@@ -92,7 +91,6 @@ body.active{
     right: 0;
 }
 
-
 .hero{
     height: 120dvh;
 
@@ -102,19 +100,57 @@ body.active{
     background-attachment: fixed;
 }
 
+.rainbow{
+
+    overflow-x: hidden;
+
+    animation: slide-in linear both;
+    animation-timeline: view();
+}
+.strip{
+    height: 5px;
+}
+.red{
+    background-color: #CC102D;
+}
+.orange{
+    background-color: #E88514;
+}
+.yellow{
+    background-color: #FFFF28;
+}
+.green{
+    background-color: #7DC62C;
+}
+.blue{
+    background-color: #71C0DE;
+}
+.purple{
+    background-color: #634C8A;
+}
+
+@keyframes slide-in{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: rotateX(0);
+    }
+}
+
 .band-members{
     padding-block: 3rem;
     margin: auto;
-
-    background-color: #0000ff31;
+}
+.band-members h2{
+    text-align: center;
+    font-size: clamp(1.5rem, 6vw, 3rem);
 }
 .members-box{
     display: grid;
     grid-template-columns: 1fr;
     gap: .5rem;
     padding-block: 3rem;
-
-    border: 1px solid;
 }
 .member-card{
     width: 80%;
@@ -136,42 +172,42 @@ body.active{
     transform: scale(1.1);
 }
 
-.member-desc div{
-    display: none;
+.member-desc-card{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1000;
+    z-index: 9999;
     overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease;
 
     background-color: #fff;
 }
-.member-desc div.active{
-    display: block;
-}
-.member-desc button{
+.member-desc-card button{
     width: 50px;
     height: 50px;
 
-    font-size: 2rem;
+    font-size: 1.7rem;
 
     border: none;
     background-color: transparent;
 }
-.member-desc img{
+.member-desc-card img{
     width: 100%;
-    display: block;
-    margin-bottom: 1rem;
 }
-.member-desc h3{
+.member-desc-card h3{
+    margin-block: 1rem;
+
     text-align: center;
     font-size: 2rem;
 }
-.member-desc p{
+.member-desc-card p{
     width: 80%;
-    padding-block: 2rem;
-    text-align: justify;
     margin: auto;
+    margin-bottom: 3rem;
+
+    text-align: justify;
 }
