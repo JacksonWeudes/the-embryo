@@ -39,7 +39,6 @@ function initHideOnScroll()
     })
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
     initSideMenu()
     initHideOnScroll()
