@@ -1,5 +1,9 @@
 @import url(base.css);
 
+
+body{
+    background-color: var(--main-color);
+}
 body.active{
     overflow-y: hidden;
 }
@@ -21,7 +25,7 @@ body.active{
 }
 
 .scroll-up .header{
-    box-shadow: 3px 3px 10px #00000042;
+    border-bottom: 1px solid var(--border-color);
 }
 .scroll-down .header{
     transform: translate3d(0, -100%, 0);
@@ -39,7 +43,7 @@ body.active{
     padding-inline: 1.4rem;
     z-index: 999;
 
-    background-color: #fff;
+    background-color: var(--main-color);
     transition: all .3s ease-in-out;
 }
 .logo{
@@ -60,7 +64,7 @@ body.active{
 .mobile-icon span{
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: var(--border-color);
     transition: all .3s ease;
 }
 .mobile-icon.active span:nth-child(1){
@@ -84,7 +88,7 @@ body.active{
     height: 100dvh;
     z-index: 999;
 
-    background-color: #fff;
+    background-color: var(--secondary-color);
     transition: .3s ease-in-out;
 }
 .side-menu-nav.active{
@@ -174,7 +178,6 @@ body.active{
     width: 100%;
     height: 100%;
 
-    color: #fff;
     background-color: #00000077;
     backdrop-filter: blur(5px);
 
@@ -185,13 +188,6 @@ body.active{
     font-size: 2rem;
     margin-block: 1rem;
 }
-.info p{
-    width: 90%;
-    margin-inline: auto;
-
-    text-align: justify;
-    color: #e2e2e2;
-}
 
 .member-card img:hover{
     transform: scale(1.1);
@@ -201,45 +197,32 @@ body.active{
 }
 
 .about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 120dvh;
     padding-block: 3rem;
+
+    background-image: url(../assets/band/band-img3.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .about p{
-    width: 90%;
-    margin-inline: auto;
-    padding-block: 1rem;
-
-    text-align: justify;
+    color: var(--title-color);
 }
 
 .discography{
     padding-block: 3rem;
     overflow: hidden;
-    border: 1px solid;
 }
 .discography h2{
     margin-bottom: 1rem;
 }
 .discography p{
-    width: 90%;
-    margin-inline: auto;
     margin-bottom: 3rem;
-
-    text-align: justify;
-}
-.discography button{
-    display: block;
-    padding: 10px 15px;
-    margin-inline: auto;
-    margin-top: 3rem;
-
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
-    font-weight: 600;
-
-    background-color: transparent;
-    transition: transform .3s ease-in-out;
-}
-.discography button:hover{
-    transform: scale(1.1);
 }
 .discography .albuns-slider{
     position: relative;
@@ -274,4 +257,97 @@ body.active{
 }
 .albuns-slider:hover .album-card{
     animation-play-state: paused !important;
+}
+
+.contact{
+    padding-block: 3rem;
+    background-color: var(--secondary-color);
+}
+.contact h2{
+    margin-bottom: 1rem;
+}
+.contact p{
+    width: 60%;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    width: 70%;
+    margin: auto;
+}
+.contact-form input, textarea{
+    width: 100%;
+    padding: 15px 20px;
+
+    font-size: 1.2rem;
+    color: var(--text-color);
+
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+}
+
+.contact-form textarea{
+    height: 200px;
+}
+.contact-form button{
+    margin-top: 1rem;
+}
+
+.sub-footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 3rem 0 0 1rem;
+}
+.sub-footer h1{
+    font-size: clamp(1.2rem, 5vw, 2rem);
+}
+.sub-footer p{
+    width: 70%;
+    margin: 0;
+    padding-block: .5rem;
+
+    text-align: justify;
+    font-size: .9rem;
+}
+.sub-footer h2{
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.quick-links ul{
+    padding-block: .5rem;
+}
+.quick-links a{
+    text-transform: lowercase;
+    color: var(--text-color);
+}
+.quick-links a:hover{
+    text-decoration: underline;
+}
+
+.social-icons{
+    padding-block: 1rem;
+}
+.social-icons a{
+    padding: .4rem;
+    font-size: 1.9rem;
+    border: 1px solid;
+    color: var(--border-color);
+}
+
+.footer{
+    padding-block: 1rem;
+    text-align: center;
+    background-color: var(--secondary-color);
+}
+.footer p{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
