@@ -80,6 +80,19 @@ body.active{
 .menu-nav{
     display: none;
 }
+.menu-nav ul{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.menu-nav a{
+    font-size: .8rem;
+    color: var(--text-color);
+}
+.menu-nav a:hover{
+    color: #fff;
+}
+
 .side-menu-nav{
     position: fixed;
     top: 50px;
@@ -94,14 +107,58 @@ body.active{
 .side-menu-nav.active{
     right: 0;
 }
+.side-menu-nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 90%;
+}
+.side-menu-nav li{
+    width: 80%;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid;
+    color: var(--text-color);
+
+    transition: .2s ease-in-out;
+}
+.side-menu-nav li:nth-child(1):hover{
+    background-color: #CC102D;
+}
+.side-menu-nav li:nth-child(2):hover{
+    background-color: #E88514;
+}
+.side-menu-nav li:nth-child(3):hover{
+    background-color: #FFFF28;
+}
+.side-menu-nav li:nth-child(4):hover{
+    background-color: #7DC62C;
+}
+.side-menu-nav li:nth-child(5):hover{
+    background-color: #71C0DE;
+}
+.side-menu-nav li:nth-child(6):hover{
+    background-color: #634C8A;
+}
+.side-menu-nav a{
+    font-family: var(--floyd-font);
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+.side-menu-nav li:hover a{
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 3px 3px #000000ad;
+}
 
 .hero{
     height: 120dvh;
 
-    background-image: url(../assets/band/band-img6.jpg);
+    background-image: url(../assets/band/band-img6.png);
     background-repeat: none;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .rainbow{
@@ -178,8 +235,8 @@ body.active{
     width: 100%;
     height: 100%;
 
-    background-color: #00000077;
-    backdrop-filter: blur(5px);
+    background-color: #000000b7;
+    backdrop-filter: blur(10px);
 
     opacity: 0;
     transition: opacity .4s ease-in-out;
@@ -205,7 +262,7 @@ body.active{
     height: 120dvh;
     padding-block: 3rem;
 
-    background-image: url(../assets/band/band-img3.webp);
+    background-image: url(../assets/band/band-img4.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -222,13 +279,14 @@ body.active{
     margin-bottom: 1rem;
 }
 .discography p{
-    margin-bottom: 3rem;
+    margin-block: 3rem;
 }
 .discography .albuns-slider{
     position: relative;
     display: flex;
     width: 100%;
     min-width: calc(var(--width) * var(--quantity));
+    background-color: var(--secondary-color);
 }
 .discography .albuns-slider .album-card{
     position: absolute;
@@ -350,4 +408,60 @@ body.active{
     margin: 0;
     padding: 0;
     text-align: center;
+}
+.footer a{
+    color: #fff;
+}
+
+@media screen and (min-width: 769px){
+    .mobile-icon{
+        display: none;
+    }
+    .menu-nav{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px){
+    .member-card{
+        width: 50%;
+    }
+    p, .contact p{
+        width: 60%;
+    }
+    .contact-form{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .hero{
+        height: 150dvh;
+    }
+    .members-box{
+        gap: .5;
+        grid-template-areas:
+            "a b b b"
+            "c d d e"
+            "c d d e";
+        padding: 3rem;
+    }
+    .member-card{
+        width: 100%;
+    }
+    .member-card:nth-child(1){
+        grid-area: a;
+    }
+    .member-card:nth-child(2){
+        grid-area: b;
+    }
+    .member-card:nth-child(3){
+        grid-area: c;
+    }
+    .member-card:nth-child(4){
+        grid-area: d;
+    }
+    .member-card:nth-child(5){
+        grid-area: e;
+    }
 }
